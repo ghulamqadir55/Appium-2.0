@@ -1,0 +1,33 @@
+package ghulamqadirpahore;
+
+import org.testng.annotations.Test;
+
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+
+import io.appium.java_client.android.options.UiAutomator2Options;
+
+public class appiumtest {
+	@Test
+	
+	public void appiumbasics() throws MalformedURLException, InterruptedException
+	{
+		
+		UiAutomator2Options options = new UiAutomator2Options();
+		options.setDeviceName("ZY227RP8Q4");
+	 	options.setApp("C:\\Users\\Ghulam Qadir\\eclipse-workspace\\appium2.0\\src\\test\\java\\resources\\ApiDemos-debug.apk");
+	 	;
+		
+		AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.quit();
+		}
+    }
